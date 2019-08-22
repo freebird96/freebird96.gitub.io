@@ -484,6 +484,10 @@ input[type="submit"]:hover{
     padding: 5rem;
     position: relative;
 }
+.copyright p{
+    font-size: .5rem;
+    text-align: center;
+}
 
 .up{
     position: absolute;
@@ -521,7 +525,7 @@ input[type="submit"]:hover{
 }
 /* End Animations */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 769px){
     html{
         overflow-x:hidden;
     }
