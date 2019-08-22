@@ -522,9 +522,14 @@ input[type="submit"]:hover{
 /* End Animations */
 
 @media screen and (max-width: 768px){
+    html{
+        overflow-x:hidden;
+    }
+    
     body{
         background: url("images/sitebg2.jpg") no-repeat fixed center;
         background-size: cover;
+        overflow-x:hidden;
     }
 
     .landing-text h1{
@@ -582,9 +587,10 @@ input[type="submit"]:hover{
 }
 
 @media screen and (max-width: 450px){
+
     html, body{
         overflow-x:hidden;
-    }    
+    }
     
     .menu-toggler{
         top: 2rem;
