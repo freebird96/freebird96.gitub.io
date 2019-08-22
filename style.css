@@ -485,7 +485,7 @@ input[type="submit"]:hover{
     position: relative;
 }
 .copyright p{
-    font-size: .5rem;
+    font-size: 1rem;
     text-align: center;
 }
 
