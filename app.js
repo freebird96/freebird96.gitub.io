@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    // $(window).on('beforeunload', function() {
-    //     $(window).scrollTop(0);
-    //    });
+    $(window).on('beforeunload', function() {
+        $(window).scrollTop(0);
+       });
 
     $('.menu-toggler').on('click', function(){
         $(this).toggleClass('open');
@@ -13,7 +13,7 @@ $(document).ready(function(){
     $('.top-nav .nav-link').on('click', function(){
         $('.menu-toggler').removeClass('open');
         $('.top-nav').removeClass('open');
-        
+        $('html').toggleClass('hidden');
     });
 
     $('nav a[href*="#"]').on('click', function(){
