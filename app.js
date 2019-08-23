@@ -7,11 +7,13 @@ $(document).ready(function(){
     $('.menu-toggler').on('click', function(){
         $(this).toggleClass('open');
         $('.top-nav').toggleClass('open');
+        $('html').toggleClass('hidden');
     });
 
     $('.top-nav .nav-link').on('click', function(){
         $('.menu-toggler').removeClass('open');
         $('.top-nav').removeClass('open');
+        
     });
 
     $('nav a[href*="#"]').on('click', function(){
@@ -29,16 +31,19 @@ $(document).ready(function(){
     $('.readmore').on('click', function(){
         $('.modal').addClass('active');
         $('.overlay').addClass('active');
+        $('html').css('overflow','hidden');
     });
 
     $('.close-button').on('click', function(){
         $('.modal').removeClass('active');
         $('.overlay').removeClass('active');
+        $('html').css('overflow','auto');
     });
 
     $('.overlay').on('click', function(){
         $('.modal').removeClass('active');
         $('.overlay').removeClass('active');
+        $('html').css('overflow','auto');
     });
 
     AOS.init({
