@@ -693,6 +693,12 @@ input[type="submit"]:hover{
     .profile-img{
         margin: 0 0 7rem 0;
     }
+    
+    .modal{
+        max-height: 70%;
+        overflow-y: scroll;
+        max-width: 90%;
+    }
 
     .portfolio-item{
         flex-direction: column;
