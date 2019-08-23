@@ -683,6 +683,12 @@ input[type="submit"]:hover{
         font-size: 1.4rem;
     }
 
+    .modal{
+        max-height: 70%;
+        overflow-y: scroll;
+        max-width: 90%;
+    }
+
     .nav-link{
         font-size: 3.5rem;
     }
@@ -692,12 +698,6 @@ input[type="submit"]:hover{
 
     .profile-img{
         margin: 0 0 7rem 0;
-    }
-    
-    .modal{
-        max-height: 70%;
-        overflow-y: scroll;
-        max-width: 90%;
     }
 
     .portfolio-item{
