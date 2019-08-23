@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    $(window).on('beforeunload', function() {
-        $(window).scrollTop(0);
-       });
+    // $(window).on('beforeunload', function() {
+    //     $(window).scrollTop(0);
+    //    });
 
     $('.menu-toggler').on('click', function(){
         $(this).toggleClass('open');
@@ -24,6 +24,21 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop: 0
         }, 1000);
+    });
+
+    $('.readmore').on('click', function(){
+        $('.modal').addClass('active');
+        $('.overlay').addClass('active');
+    });
+
+    $('.close-button').on('click', function(){
+        $('.modal').removeClass('active');
+        $('.overlay').removeClass('active');
+    });
+
+    $('.overlay').on('click', function(){
+        $('.modal').removeClass('active');
+        $('.overlay').removeClass('active');
     });
 
     AOS.init({

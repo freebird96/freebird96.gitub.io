@@ -34,6 +34,23 @@ img{
     width: 100%;
 }
 
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(177, 196, 164, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    transition: 300ms ease-in-out;
+}
+
+.overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
 /* End Global */
 
 
@@ -245,10 +262,13 @@ li{
      flex: 1;
      margin-right: 5rem;
      
+     
 }
 
 .profile-img img {
     border-radius: 100%;
+    /* width: 50rem;
+    margin-bottom: 10rem; */
 }
 
 .about-details{
@@ -273,6 +293,60 @@ li{
     -webkit-background-clip: text;    
     -webkit-text-fill-color: transparent;
 }
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 300ms ease-in-out;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    color: black;
+}
+
+.readmore{
+    margin-top: 1rem;
+    color: #ffe838;
+    cursor: pointer;
+}
+
+.modal.active{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.modal-header{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button{
+    cursor: pointer;
+    border:none;
+    outline: none;
+    background: none;
+    font-size: 3rem;
+    margin-right: 2rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 3rem;
+    text-align: justify;
+}
+
 /* End About */
 /* ------------------------------------------------------- */
 
