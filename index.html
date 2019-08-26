@@ -61,9 +61,7 @@
                 
                 <div class="readmore">
                     <p>Read More...</p>
-                </div>
-                
-                
+                </div> 
                 <div class="social-media">
                     <ul class="nav-list">
                         <li>
@@ -86,9 +84,9 @@
                     </ul>
                 </div>  
             </div> 
-            <div class="modal" id="model">
+            <div class="modal self-intro" id="model">
                 <div class="modal-header">
-                    <div class="title">Self Intro</div>
+                    <div class="title"></div>
                     <button class="close-button">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -151,8 +149,7 @@
                         <h6>Web Developement</h6>
                         <h1>Diet App using React</h1>
                         <p>Web app using React JS and a free online API. The app lets you search for the ingredients used in the preparation of your favorite food item (it can only show results on the food available in the database of the API). The app shows you results based on the search.</p>
-                        <a href="https://github.com/freebird96/The-Diet-App"
-                        target="_blank" class="cta">View Details</a>
+                        <a class="cta">View Details</a>
                     </div>
                 </div>
                 <div class="portfolio-item">
@@ -160,8 +157,7 @@
                         <h6>Web Developement</h6>
                         <h1>Portfolio Site using React JS</h1>
                         <p>Portfolio showing the projects done, resume, contact details and other important details prepared using React JS.</p>
-                        <a href="https://github.com/freebird96/My-portfolio_site"
-                        target="_blank" class="cta">View Details</a>
+                        <a class="cta">View Details</a>
                     </div>
                     <div class="portfolio-img" data-aos="fade-left" data-aos-delay="300">
                         <img src="images/portitem2.jpeg" alt="">
@@ -175,10 +171,52 @@
                         <h6>Web Developement</h6>
                         <h1>Restaurant website</h1>
                         <p>Responsive restaurant website using HTML/CSS and JavaScript. This is a simple website designed for an imaginary restaurant. The website is not linked to any back-end and it’s just front end that was created.</p>
-                        <a href="https://github.com/freebird96/Bakery-website" 
-                        target="_blank" class="cta">View Details</a>
+                        <a class="cta">View Details</a>
                     </div>
                 </div>
+                <div class="portfolio-modal portfolio" id="model">
+                    <div class="modal-header">  
+                        <div class="title"></div>                      
+                        <button class="close-button">&times;</button>
+                    </div>
+                    <div class="portfolio-modal-body">
+                        <div class="modal-content">
+                            <div class="mySlides">
+                                <div class="numbertext">1/4</div>
+                                <img src="./images/portitem3.jpeg" alt="hello" style="width: 100%">
+                            </div>
+                            <div class="mySlides">
+                                <div class="numbertext">2/4</div>
+                                <img src="./images/portitem2.jpeg" alt="hello" style="width: 100%">
+                            </div>
+                            <div class="mySlides">
+                                <div class="numbertext">3/4</div>
+                                <img src="./images/portitem1.jpeg" alt="hello" style="width: 100%">
+                            </div>
+                            <!--  Next/previous controls -->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                            <!-- Caption text -->
+                            <div class="caption-container">
+                              <p id="caption">hello</p>
+                            </div>
+
+                            <!-- Thumbnail image controls -->
+                            
+                            <div class="column">
+                                <img class="demo" src="./images/portitem3.jpeg" onclick="currentSlide(1)" alt="Nature">
+                            </div>        
+                            <div class="column">
+                                <img class="demo" src="./images/portitem2.jpeg" onclick="currentSlide(2)" alt="forest">
+                            </div>  
+                            <div class="column">
+                                <img class="demo" src="./images/portitem1.jpeg" onclick="currentSlide(3)" alt="australia">
+                            </div>                          
+                           
+                        </div>                                               
+                    </div>
+                </div> 
             </div>
     </section>
 

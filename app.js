@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    $(window).on('beforeunload', function() {
-        $(window).scrollTop(0);
-       });
+    // $(window).on('beforeunload', function() {
+    //     $(window).scrollTop(0);
+    //    });
 
     $('.menu-toggler').on('click', function(){
         $(this).toggleClass('open');
@@ -29,7 +29,7 @@ $(document).ready(function(){
     });
 
     $('.readmore').on('click', function(){
-        $('.modal').addClass('active');
+        $('.self-intro').addClass('active');
         $('.overlay').addClass('active');
         $('html').css('overflow','hidden');
     });
@@ -46,6 +46,24 @@ $(document).ready(function(){
         $('html').css('overflow','auto');
     });
 
+    $('.cta').on('click', function(){
+        $('.portfolio').addClass('active');
+        $('.overlay').addClass('active');
+        $('html').css('overflow','hidden');
+        
+    });
+    $('.close-button').on('click', function(){
+        $('.portfolio-modal').removeClass('active');
+        $('.overlay').removeClass('active');
+        $('html').css('overflow','auto');
+    });
+
+    $('.overlay').on('click', function(){
+        $('.portfolio-modal').removeClass('active');
+        $('.overlay').removeClass('active');
+        $('html').css('overflow','auto');
+    });
+
     AOS.init({
         easing: 'ease',
         duration: 1800,
@@ -53,4 +71,36 @@ $(document).ready(function(){
     })
 
 });
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
 
