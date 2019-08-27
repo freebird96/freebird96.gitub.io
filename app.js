@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    // $(window).on('beforeunload', function() {
-    //     $(window).scrollTop(0);
-    //    });
+    $(window).on('beforeunload', function() {
+        $(window).scrollTop(0);
+       });
 
     $('.menu-toggler').on('click', function(){
         $(this).toggleClass('open');
