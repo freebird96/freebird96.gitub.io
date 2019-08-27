@@ -46,8 +46,14 @@ $(document).ready(function(){
         $('html').css('overflow','auto');
     });
 
-    $('.cta').on('click', function(){
-        $('.portfolio').addClass('active');
+    $('.react').on('click', function(){
+        $('#react').addClass('active');
+        $('.overlay').addClass('active');
+        $('html').css('overflow','hidden');
+        
+    });
+    $('.bakery').on('click', function(){
+        $('#bakery').addClass('active');
         $('.overlay').addClass('active');
         $('html').css('overflow','hidden');
         
@@ -72,6 +78,10 @@ $(document).ready(function(){
 
 });
 
+function set(){
+    var slideIndex = 1;
+    showSlides(slideIndex);
+}
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -88,6 +98,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
+  
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
@@ -101,6 +112,8 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  captionText.innerHTML = dots[slideIndex-1].alt;  
 }
+
+
 
